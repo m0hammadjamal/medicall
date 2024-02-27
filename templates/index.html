@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Document</title>
+</head>
+<body>
+  <section id="home">
+    <header>
+      <section class="wrapper">
+        <div class="left">
+          <h1>Medico</h1>
+        </div>
+        <div class="middle">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="#" class="buttonone">Login</a></li>
+            <li><a href="#" class="buttontwo">Join Us <img src="{% static '/images/right arrow.png' %}" alt="right"></a></li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <section id="spotlight">
+      <section class="wrapper">
+        <span>Welcome</span>
+        <h1>A Great Place to <br>Receive Care</h1>
+        <p>Overcame any hurdle or any other problem.</p>
+        <ul>
+          <li><a href="#" class="buttonone">Join Us</a></li>
+          <li><a href="#" class="buttontwo">Lean More</a></li>
+        </ul>
+      </section>
+    </section>
+  </section>
+  <section id="content">
+    <section class="wrapper">
+      <div class="top">
+        <span>Practice Advice</span>
+        <h1>See Our Impressions</h1>
+        <p>Problems trying to resolve the conflict between <br>the two major realms of classical physics: Newtonian machanics</p>
+      </div>
+      <div class="bottom">
+        {% for impression in impressions %}
+        <div class="box">
+          <img src="{{impression.image.url}}" alt="">
+          <h3>{{impression.title}}</h3>          
+          <div class="line"></div>
+          <p>{{impression.discription}}</p>
+        </div>        
+        {% endfor %}
+      </div>
+    </section>
+  </section>
+  <section id="video">
+    <section class="wrapper">
+      <div class="left">
+        <div class="line"></div>
+        <h1>Our Doctors <br>Specialize in you</h1>
+        <p>Problems trying to resolve the conflict between <br>the two major realms of Classical physics: <br>Newtonian mechanics</p>
+        <div class="button">
+          <a href="#">Learn More <img src="{% static '/images/icon arrow-next.png' %}" alt="icon"></a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="{% static '/images/photo-02.png' %}" alt="ambulance">
+        <div class="play">
+          <img src="{% static '/images/icn play .icn-sm.png' %}" alt="play">
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="medicine">
+    <section class="wrapper">
+      <div class="left">
+        <img src="{% static '/images/Untitled design (1).png' %}" alt="po">
+      </div>
+      <div class="right">
+        <div class="line"></div>
+        <h1>Leading Medicine</h1>
+        <p>Problems trying to resolve the conflict between <br>the two major realms of Classical physics: <br>Newtonian mechanics</p>
+        <div class="button">
+          <a href="#">Learn More <img src="{% static '/images/icon arrow-next.png' %}" alt="icon"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="product">
+    <section class="wrapper">
+      <div class="top">
+        <span>Courses</span>
+        <h1>Our Products</h1>
+        <p>Problems trying to resolve the conflict between <br>the two major realms of Classical physics: Newtonian mechanics</p>
+      </div>
+      <div class="middle">
+        <div class="clm one">
+          <h3>Sale</h3>
+          <img src="{% static '/images/our-product-photo-01.png' %}" alt="one" class="img">
+          <div class="icons">
+            <div class="padding">
+              <img src="{% static '/images/love.png' %}" alt="love">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/cart-icon.png' %}" alt="cart">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/eye-icon.png' %}" alt="eye">
+            </div>
+          </div>
+        </div>
+        <div class="clm two">
+          <h3>Sale</h3>
+          <img src="{% static '/images/our-product-photo-02.png' %}" alt="two" class="img">
+          <div class="icons">
+            <div class="padding">
+              <img src="{% static '/images/love.png' %}" alt="love">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/cart-icon.png' %}" alt="cart">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/eye-icon.png' %}" alt="eye">
+            </div>
+          </div>
+        </div>
+        <div class="clm three">
+          <h3>Sale</h3>
+          <img src="{% static '/images/our-product-photo-03.png' %}" alt="three" class="img">
+          <div class="icons">
+            <div class="padding">
+              <img src="{% static '/images/love.png' %}" alt="love">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/cart-icon.png' %}" alt="cart">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/eye-icon.png' %}" alt="eye">
+            </div>
+          </div>
+        </div>
+        <div class="clm four">
+          <h3>Sale</h3>
+          <img src="{% static '/images/our-product-photo-04.png' %}" alt="four" class="img">
+          <div class="icons">
+            <div class="padding">
+              <img src="{% static '/images/love.png' %}" alt="love">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/cart-icon.png' %}" alt="cart">
+            </div>
+            <div class="padding">
+              <img src="{% static '/images/eye-icon.png' %}" alt="eye">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="boxcontant">
+          <div class="star">
+            <span>Best dental surgeons</span>
+            <div class="rating">
+              <img src="{% static '/images/star-icon.png' %}" alt="star">
+              <h5>4.9</h5>
+            </div>
+          </div>
+          <h3>sit amet nulla facilisi morbi</h3>
+          <p>We focus on ergonomics and meeting you....</p>
+          <div class="sales">
+            <img src="{% static '/images/download-icon.png' %}" alt="download">
+            <h6>15 Sales</h6>
+          </div>
+          <div class="price">
+            <h4 class="rate">$16.48</h4>
+            <h4 class="discount">$6.48</h4>
+          </div>
+          <a href="#">Learn More <img src="{% static '/images/icon arrow-next.png' %}" alt="icon"></a>
+        </div>
+      <div class="boxcontant">
+        <div class="star">
+          <span>Online Appoinment</span>
+          <div class="rating">
+            <img src="{% static '/images/star-icon.png' %}" alt="star">
+            <h5>4.9</h5>
+          </div>
+        </div>
+        <h3>bibendum arcu vitae</h3>
+        <p>We focus on ergonomics and meeting you....</p>
+        <div class="sales">
+          <img src="{% static '/images/download-icon.png' %}" alt="download">
+          <h6>15 Sales</h6>
+        </div>
+        <div class="price">
+          <h4 class="rate">$16.48</h4>
+          <h4 class="discount">$6.48</h4>
+        </div>
+        <a href="#">Learn More <img src="{% static '/images/icon arrow-next.png' %}" alt="icon"></a>
+      </div>
+    <div class="boxcontant">
+      <div class="star">
+        <span>health queries</span>
+        <div class="rating">
+          <img src="{% static '/images/star-icon.png' %}" alt="star">
+          <h5>4.9</h5>
+        </div>
+      </div>
+      <h3>magna fringilla urna porttitor</h3>
+      <p>We focus on ergonomics and meeting you....</p>
+      <div class="sales">
+        <img src="{% static '/images/download-icon.png' %}" alt="download">
+        <h6>15 Sales</h6>
+      </div>
+      <div class="price">
+        <h4 class="rate">$16.48</h4>
+        <h4 class="discount">$6.48</h4>
+      </div>
+      <a href="#">Learn More <img src="{% static '/images/icon arrow-next.png' %}" alt="icon"></a>
+    </div>
+    <div class="boxcontant">
+      <div class="star">
+        <span>painless procedures</span>
+        <div class="rating">
+          <img src="{% static '/images/star-icon.png' %}" alt="star">
+          <h5>4.9</h5>
+        </div>
+      </div>
+      <h3>magna fringilla urna porttitor</h3>
+      <p>We focus on ergonomics and meeting you....</p>
+      <div class="sales">
+        <img src="{% static '/images/download-icon.png' %}" alt="download">
+        <h6>15 Sales</h6>
+      </div>
+      <div class="price">
+        <h4 class="rate">$16.48</h4>
+        <h4 class="discount">$6.48</h4>
+      </div>
+      <a href="#">Learn More <img src="{% static '/images/icon arrow-next.png' %}" alt="icon"></a>
+    </div>
+  </div>
+    </section>
+  </section>
+  <section id="testimonials">
+    <section class="wrapper">
+      <div class="top">
+        <span>testimonials</span>
+        <h1>Our Experts</h1>
+        <p>Problems trying to resolve the conflict between <br>the two major realms of Classical physics: Newtonian mechanics</p>
+      </div>
+      <div class="bottom">
+        <div class="division left">
+          <img src="{% static '/images/our-experts-photo-01.png' %}" alt="expert">
+          <p>Slate helps you see how many more days <br>you need to work to reach your financial <br>goal for the month and year.</p>
+          <div class="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-stroke.png' %}" alt="star">
+          </div>
+          <h3>ragina miles</h3>
+          <span>designer</span>
+        </div>
+        <div class="division right">
+          <img src="{% static '/images/our-experts-photo-02.png' %}" alt="expert">
+          <p>Slate helps you see how many more days <br>you need to work to reach your financial <br>goal for the month and year.</p>
+          <div class="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-02.png' %}" alt="star">
+            <img src="{% static '/images/star-icon-stroke.png' %}" alt="star">
+          </div>
+          <h3>ragina miles</h3>
+          <span>designer</span>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="team">
+    <section class="wrapper">
+      <div class="top">
+        <span>team</span>
+        <h1>Our Team</h1>
+        <p>Problems trying to resolve the conflict between <br>the two major realms of Classical physics: Newtonian mechanics</p>
+      </div>
+      <div class="bottom">
+        <div class="photo">
+          <img src="{% static '/images/our-team-01.png' %}" alt="photo">
+          <h3>Julian Jeamson</h3>
+          <span>proffesion</span>
+          <div class="icons">
+            <img src="{% static '/images/facebook.png' %}" alt="facebook">
+            <img src="{% static '/images/instagram.png' %}" alt="instagram">
+            <img src="{% static '/images/twitter.png' %}" alt="twitter">
+          </div>
+        </div>
+        <div class="photo">
+          <img src="{% static '/images/our-team-02.png' %}" alt="photo">
+          <h3>Julian Jeamson</h3>
+          <span>proffesion</span>
+          <div class="icons">
+            <img src="{% static '/images/facebook.png' %}" alt="facebook">
+            <img src="{% static '/images/instagram.png' %}" alt="instagram">
+            <img src="{% static '/images/twitter.png' %}" alt="twitter">
+          </div>
+        </div>
+        <div class="photo">
+          <img src="{% static '/images/our-team-03.png' %}" alt="photo">
+          <h3>Julian Jeamson</h3>
+          <span>proffesion</span>
+          <div class="icons">
+            <img src="{% static '/images/facebook.png' %}" alt="facebook">
+            <img src="{% static '/images/instagram.png' %}" alt="instagram">
+            <img src="{% static '/images/twitter.png' %}" alt="twitter">
+          </div>
+        </div>
+        <div class="photo">
+          <img src="{% static '/images/our-team-04.png' %}" alt="photo">
+          <h3>Julian Jeamson</h3>
+          <span>proffesion</span>
+          <div class="icons">
+            <img src="{% static '/images/facebook.png' %}" alt="facebook">
+            <img src="{% static '/images/instagram.png' %}" alt="instagram">
+            <img src="{% static '/images/twitter.png' %}" alt="twitter">
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="newsletter">
+    <section class="wrapper">
+      <div class="top">
+        <span>newsletter</span>
+        <h1>JOIN US</h1>
+        <p>Problems trying to resolve the conflict between <br>the two major realms of Classical physics: Newtonian mechanics</p>
+        <form>
+          <input type="text" placeholder="Your Email">
+          <input type="button" value="subscribe">
+        </form>
+      </div>
+    </section>
+  </section>
+  <footer>
+    <section class="wrapper">
+      <div class="top">
+        <div class="card">
+          <h3>Company Info</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Carrier</a></li>
+            <li><a href="#">We are hiring</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Carrier</a></li>
+            <li><a href="#">We are hiring</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Features</h3>
+          <ul>
+            <li><a href="#">Business Marketing</a></li>
+            <li><a href="#">User Analytic</a></li>
+            <li><a href="#">Live Chat</a></li>
+            <li><a href="#">Unlimited Support</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">IOS & Android</a></li>
+            <li><a href="#">Watch a Demo</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Get In Touch</h3>
+          <ul class="one">
+            <li>
+              <img src="{% static '/images/call-icon.png' %}" alt="call">
+              <a href="#">
+              <p>(480) 555-0103</p>
+            </a></li>
+            <li>
+              <img src="{% static '/images/location-icon.png' %}" alt="loc">
+              <a href="#">
+              <p>4517 Washington Ave.manchester,keni</p>
+            </a></li>
+            <li>
+              <img src="{% static '/images/mail-icon.png' %}" alt="sent">
+              <a href="#">
+              <p>debra.holt@example.com</p>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+ 
+  <script src="/js/index.js">
+
+  </script>
+</body>
+</html>
